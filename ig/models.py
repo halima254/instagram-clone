@@ -6,14 +6,14 @@ from djando.contrib.auth.models import User
 class Profile(models.Model):
     #creating profile class
     user = models.OneToOneField(User, on_delete =models.CASCADE)
-    biography = models.TextField(blank=True)
+    bio = models.TextField(blank=True)
     phone_number = models.CharField(max_length=20,blank=True)
     profile_pic = models.ImageField(blank=True, null=True)
     
     def __str__(self):
         return self.user.username
     def split_biography(self):
-        return self.biography.split("\n")
+        return self.bio.split("\n")
     
     
 class Post(models.Model):
