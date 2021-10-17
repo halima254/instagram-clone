@@ -40,4 +40,12 @@ class Comment(models.Models):
         return "Comment by {} on {}".format(self.user.username, self.post_linked.caption)
     
     class Meta:
-        ordering = ('-comment_posted_on,')        
+        ordering = ('-comment_posted_on,')  
+        
+        
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post_linked = models.ForeignKey(Post, on_delete=models.CASCADE,related_name='posts')
+    
+    def __str__(self):
+        return 'User :{} Liked {} Post ' .format(self.user.username,self.post_linked.caption)           
