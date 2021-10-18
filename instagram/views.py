@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import SignUpForm
-from insta.models import Profile
+from ig.models import Profile
 
 def signup(request):
     if request.method == 'POST':

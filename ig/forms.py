@@ -15,7 +15,7 @@ class ProfileForm(forms.Form):
         self.label_suffix =""   
         
     profile_pic = forms.ImageField(required=False)
-    username = forms.Charfield(max_length=100, required=True)
+    username = forms.CharField(max_length=100, required=True)
     first_name = forms.CharField(max_length=100, required=False) 
     last_name = forms.CharField(max_length=100, required=False)
     phone_number =   forms.CharField(max_length=20, required=False)
