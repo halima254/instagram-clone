@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from djando.contrib.auth.models import User
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Profile(models.Model):
@@ -30,7 +30,7 @@ class Post(models.Model):
     def __str__(self):
         return self.caption
     
-class Comment(models.Models):
+class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post_linked = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     description = models.CharField(max_length=500)
