@@ -1,0 +1,65 @@
+body{
+    background-color: azure;
+
+}
+.posts-list{
+    margin-top: 150px;
+}
+.post{
+    margin-top: auto;
+    width: 600px;
+    border: 2px solid gray;
+    padding: 1px;
+    background-color: beige;
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+.divider{
+    width: 100%;
+    color: antiquewhite;
+    border-width: 0.1px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0.3px;
+    height: 0.2px;
+    margin-bottom: 0px;
+}
+.post-header{
+    display: flex;
+    flex-direction: row;
+}
+.profile-image{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.profile-image img{
+    border-radius: 50%;
+    max-width: 40px;
+    margin-right: 10px;
+}
+.profile-name{
+    margin-top: 30px;
+}
+.comment-icons{
+    display: flex;
+    flex-direction: row;
+}
+.comment-icons >div{
+    margin: 5px 5px 5px 10px;
+}
+.comment-input{
+    width: 600px;
+    height: 60px;
+}
+.description-input{
+    height: 45px;
+    width: 87%;
+    border: 1px solid navy
+}
+.comment-post{
+    width: 10%;
+    height: 40px;
+    border: 2px solid gainsboro;
+    background-color: wheat;
+    color: aqua;
+}
