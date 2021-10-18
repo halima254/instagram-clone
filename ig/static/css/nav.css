@@ -47,7 +47,7 @@
 .insta-logout{
     padding-top: 7px;
     padding-left: 7px;
-}}
+}
 
 .nav-profile-image img{
     width: 40px;
@@ -102,3 +102,4 @@ width:40px;
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
