@@ -13,7 +13,7 @@ def home(request):
     template = loader.get_template('ig/home.html')
         
     if request.user.is_anonymous:
-         Context = {}
+         context = {}
          return HttpResponse(template.render(context,request)) 
     posts = Post.objects.all()
     profile = Profile.objects.get(user= request.user)
@@ -38,8 +38,9 @@ def signup(request):
     pass
 
 def user_profile(request, username):
-    template = loader.get_template('insta/profile.html')
-    profile = Profile.objects.get(user= request.user.username)
+    template = loader.get_template('ig/profile.html')
+    profile = Profile.objects.get(user=request.user)
+    posts = Post.objects.filter(author__user__username=request.user.username)
     context = {'profile':profile, 'posts':posts}
     
     return HttpResponse(template.render(context, request))    
@@ -72,7 +73,7 @@ def like_post(request, postid):
 def add_post(request):
     template = loader.get_template('ig/post.html')
     profile = Profile.objects.get(user=request.user)
-    if request.method =='POST':
+    if request.method =="POST":
         profile = Profile.objects.get(user=request.user)
         form = PostForm(request.POST, request.FILES)
         
@@ -81,12 +82,12 @@ def add_post(request):
             fs.author=profile
             fs.save()
             return redirect(reverse('home'))
-        else:
-            form=PostForm()
-            pass
+    else:
+        form=PostForm()
+        pass
         
-        context={'form':form,'profile':profile}
-        return HttpResponse(template.render(context,request))
+    context={'form':form,'profile':profile}
+    return HttpResponse(template.render(context,request))
     
   
 def edit_profile(request,username):
@@ -106,16 +107,17 @@ def edit_profile(request,username):
             profile.save()
             return redirect(reverse('home'))
         
-        else:
-            form = ProfileForm(initial={'username':username,
-                                        'first_name':user.first_name,
-                                        'last_name': user.last_name,
-                                        'phone_number':profile.phone_number,
-                                        'bio': profile.bio})
+    else:
+        form = ProfileForm(initial={'username':username,
+                                    
+                                    'first_name':user.first_name,
+                                    'last_name': user.last_name,
+                                    'phone_number':profile.phone_number,
+                                    'bio': profile.bio})
         
         
-        context={'form':form,'user':user,'profile':profile}
-        return HttpResponse(template.render(context,request))                       
+    context={'form':form,'user':user,'profile':profile}
+    return HttpResponse(template.render(context,request))                       
                                
                                
         

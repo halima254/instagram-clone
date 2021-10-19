@@ -28,7 +28,7 @@
 
     <div class="dropdown nav-profile-image">
             {% if not profile.profile_pic %}
-              <a href="/user/{{ profile.user.username }}"><img class="rounded-circle avatar"  src="{% static 'img/avatar-2.jpg' %}"  alt="{{ profile.user.username }}" data-holder-rendered="true"></a>
+              <a href="/user/{{ profile.user.username }}"><img class="rounded-circle avatar"  src="{% static 'img/avatar-2.png' %}"  alt="{{ profile.user.username }}" data-holder-rendered="true"></a>
             {% else %}
               <a href="/user/{{ profile.user.username }}" ><img class="rounded-circle avatar" src="{{ profile.profile_pic.url }}" alt="{{ profile.user.username }}"  data-holder-rendered="true"></a>
             {% endif %}

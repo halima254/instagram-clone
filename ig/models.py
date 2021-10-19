@@ -25,7 +25,7 @@ class Post(models.Model):
     likes = models.IntegerField(default=0)
     
     class Meta:
-        ordering = ['-posted_on']
+        ordering = ['-posted_on',]
         
     def __str__(self):
         return self.caption
@@ -40,7 +40,7 @@ class Comment(models.Model):
         return "Comment by {} on {}".format(self.user.username, self.post_linked.caption)
     
     class Meta:
-        ordering = ('-comment_posted_on,')  
+        ordering = ('-comment_posted_on',)  
         
         
 class Like(models.Model):

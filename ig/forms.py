@@ -12,7 +12,7 @@ class ProfileForm(forms.Form):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args,**kwargs)
-        self.label_suffix =""   
+        self.label_suffix = ""   
         
     profile_pic = forms.ImageField(required=False)
     username = forms.CharField(max_length=100, required=True)
