@@ -22,6 +22,8 @@ from decouple import config,Csv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -107,7 +109,7 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 # DATABASES['default'].update(db_from_env)
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
-ALLOWED_HOSTS = '*'
+ALLOWED_HOSTS = ['*','.herokuapp.com']
 DEBUG = True
 
 
