@@ -109,6 +109,17 @@ DATABASES['default'].update(db_from_env)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instagram',
+        'USER' :'moringa',
+        'PASSWORD':'access'
+    }
+}
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
