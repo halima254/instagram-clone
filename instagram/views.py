@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .forms import SignUpForm
 from ig.models import Profile
 
+
 def signup(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:

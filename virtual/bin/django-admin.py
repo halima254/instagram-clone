@@ -1,4 +1,4 @@
-#!/home/moringa/Desktop/instagram/virtual/bin/python
+#!/home/moringa/Desktop/instagram/virtual/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
