@@ -1,5 +1,5 @@
 body{
-    background-color: azure;
+    background-color: #a29bfe;
 
 }
 .posts-list{
@@ -60,8 +60,8 @@ body{
     width: 10%;
     height: 40px;
     border: 2px solid gainsboro;
-    background-color: wheat;
-    color: aqua;
+    background-color: #a29bfe;
+    color: black;
 }
 a.profile-link{
     text-decoration: none;

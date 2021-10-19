@@ -1,5 +1,6 @@
 body{
-    background: #f3f1f1d9;
+    background: black;
+    background-color: #a29bfe;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
     
@@ -10,7 +11,7 @@ body{
         border: 1px solid gray;
         padding: 10px;
         margin-top: 10%;
-        background: white;
+        background:#a29bfe;
         line-height: 35px;
      }
     
